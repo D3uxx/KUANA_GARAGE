@@ -7,6 +7,7 @@ Video: https://youtu.be/sv0Bt76SmVU - Sorry for my bad english, im portuguese.
 
 Vehicle Shop/ 
 Server:
+      
       RegisterServerEvent('esx_vehicleshop:setVehicleOwned')
       AddEventHandler('esx_vehicleshop:setVehicleOwned', function (vehicleProps)
         local _source = source
@@ -48,6 +49,7 @@ Server:
       
 Mechanic/
 Client: 
+    
     {label = "Nitro Canister - 20000$",      value = 'giveboost'},
 
 
@@ -86,6 +88,7 @@ Client:
     else
     
 Server:
+    
     ESX.RegisterServerCallback('esx_mechanicjob:checkdbnitro', function(source, cb, plate)
         local xPlayer = ESX.GetPlayerFromId(source)
         local result = MySQL.Sync.fetchAll("SELECT nitro FROM owned_vehicles WHERE plate = @plate", {
